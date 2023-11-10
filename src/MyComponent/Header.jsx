@@ -52,7 +52,6 @@ const Header = (props) => {
           <Nav className="ml-auto">
             <Link
               style={navLinkStyle}
-              to="/Sign-Ate"
               onClick={()=>{props.setG(true)}}
               onMouseOver={onNavLinkHover}
               onMouseLeave={onNavLinkLeave}
@@ -61,7 +60,6 @@ const Header = (props) => {
             </Link>
             <Link
               style={navLinkStyle}
-              to="/Sign-Ate"
               onClick={()=>{props.setG(false)}}
               onMouseOver={onNavLinkHover}
               onMouseLeave={onNavLinkLeave}
