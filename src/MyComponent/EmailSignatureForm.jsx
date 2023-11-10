@@ -182,7 +182,7 @@ const StudentForm = () => {
         </Button>
       </Form>
 
-      {/* {generatedSignature && <GeneratedSignature formData={formData} />} */}
+      {generatedSignature && <GeneratedSignature formData={formData} />}
     </div>
   );
 };
