@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import { Container, Dropdown, Navbar, Nav } from "react-bootstrap";
+import React from "react";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
-  const [showDropdown, setshowDropdown] = useState(false);
-  const categories = ["General", "Business", "Entertainment", "Health", "Science", "Sports", "Technology"];
   const { title } = props;
 
   const headerStyle = {
