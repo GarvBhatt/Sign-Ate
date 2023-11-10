@@ -1,34 +1,17 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import StudentForm from "./MyComponent/EmailSignatureForm";
 import Header from "./MyComponent/Header";
 import About from "./MyComponent/About";
 import Footer from "./MyComponent/Footer";
 
 function App() {
+  const [G, setG] = useState(true);
   return (
     <Router>
-      <Header title={" Sign Ate"} />
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <>
-              <StudentForm />
-            </>
-          }
-        />
-        <Route
-          exact
-          path="/About"
-          element={
-            <>
-              <About />
-            </>
-          }
-        />
-      </Routes>
+      <Header title={" Sign Ate"} setG={setG}/>
+        {G && <StudentForm />}
+        {!G && <About />}
       <Footer />
     </Router>
   );

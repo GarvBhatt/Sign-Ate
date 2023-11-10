@@ -53,6 +53,7 @@ const Header = (props) => {
             <Link
               style={navLinkStyle}
               to="/"
+              onClick={()=>{props.setG(true)}}
               onMouseOver={onNavLinkHover}
               onMouseLeave={onNavLinkLeave}
             >
@@ -61,6 +62,7 @@ const Header = (props) => {
             <Link
               style={navLinkStyle}
               to="/about"
+              onClick={()=>{props.setG(false)}}
               onMouseOver={onNavLinkHover}
               onMouseLeave={onNavLinkLeave}
             >
