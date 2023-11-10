@@ -9,7 +9,6 @@ function App() {
   return (
     <Router>
       <Header title={" Sign Ate"} />
-        <StudentForm />
       <Routes>
         <Route
           exact
