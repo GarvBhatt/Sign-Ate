@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Sign-Ate/static/css/main.7eebc124.css",
-    "main.js": "/Sign-Ate/static/js/main.218a7167.js",
+    "main.js": "/Sign-Ate/static/js/main.470ffaf2.js",
     "static/js/787.3195545a.chunk.js": "/Sign-Ate/static/js/787.3195545a.chunk.js",
     "index.html": "/Sign-Ate/index.html",
     "main.7eebc124.css.map": "/Sign-Ate/static/css/main.7eebc124.css.map",
-    "main.218a7167.js.map": "/Sign-Ate/static/js/main.218a7167.js.map",
+    "main.470ffaf2.js.map": "/Sign-Ate/static/js/main.470ffaf2.js.map",
     "787.3195545a.chunk.js.map": "/Sign-Ate/static/js/787.3195545a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7eebc124.css",
-    "static/js/main.218a7167.js"
+    "static/js/main.470ffaf2.js"
   ]
 }
