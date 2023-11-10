@@ -97,9 +97,9 @@ const Footer = () => (
 
     {/* Copyright Section */}
     <div className="bg-dark text-white text-center py-3">
-      &copy; {new Date().getFullYear()} Email Signature Generator. All rights reserved. |{" "}
-      <a href="https://yourwebsite.com/" className="text-white">
-        yourwebsite.com
+      &copy; {new Date().getFullYear()} Sign-Ate. All rights reserved. |{" "}
+      <a href="https://garvbhatt.github.io/Sign-Ate/" className="text-white">
+      garvbhatt.github.io/Sign-Ate/
       </a>
     </div>
   </footer>

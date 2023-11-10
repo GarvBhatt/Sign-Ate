@@ -1,72 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
+import { Container, Dropdown, Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { Container, Navbar, Nav } from "react-bootstrap";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-
-const HeaderContainer = styled(Navbar)`
-  background-color: silver;
-  color: #333;
-  padding: 15px;
-  font-size: 28px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  transition: background-color 0.3s;
-`;
-
-const Logo = styled(Navbar.Brand)`
-  font-size: 25px;
-  margin-left: 1.5em;
-  margin-right: 12em;
-`;
-
-const NavLink = styled(Link)`
-  font-size: 18px;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s;
-  margin-left: 2em;
-  margin-right: 2em;
-
-  &:hover {
-    color: purple;
-  }
-`;
 
 const Header = (props) => {
+  const [showDropdown, setshowDropdown] = useState(false);
+  const categories = ["General", "Business", "Entertainment", "Health", "Science", "Sports", "Technology"];
+  const { title } = props;
+
+  const headerStyle = {
+    backgroundColor: "rgb(210 210 210)",
+    color: "#333",
+    padding: "7px",
+    fontSize: "28px",
+    fontWeight: "bold",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: "20px",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    borderRadius: "5px",
+    transition: "background-color 0.3s",
+  };
+
+  const navLinkStyle = {
+    fontSize: "21px",
+    textDecoration: "none",
+    color: "#333",
+    transition: "color 0.3s",
+    marginRight: "5.5em",
+  };
+
+  const logoStyle = {
+    fontSize: "25px",
+    marginRight: "14.25em",
+  };
+
+  const onNavLinkHover = (e) => {
+    e.target.style.color = "purple";
+  };
+
+  const onNavLinkLeave = (e) => {
+    e.target.style.color = "#333";
+  };
+
   return (
-    <HeaderContainer expand="lg">
+    <Navbar expand="lg" style={headerStyle}>
       <Container>
-        <Logo to="/">
-          <img
-            src="https://img.icons8.com/fluency/48/sticky-notes.png"
-            alt="Sticky Notes Logo"
-          />
-          {props.title}
-        </Logo>
+        <Navbar.Brand to="/" style={logoStyle}>
+        <img width="41" height="41" src="https://img.icons8.com/fluency/48/sticky-notes.png" alt="news"/>{title}
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
+            <Link
+              style={navLinkStyle}
+              to="/"
+              onMouseOver={onNavLinkHover}
+              onMouseLeave={onNavLinkLeave}
+            >
+              Home
+            </Link>
+            <Link
+              style={navLinkStyle}
+              to="/about"
+              onMouseOver={onNavLinkHover}
+              onMouseLeave={onNavLinkLeave}
+            >
+              About
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </HeaderContainer>
+    </Navbar>
   );
-};
-
-Header.defaultProps = {
-  title: "Sign Ate",
-};
-
-Header.propTypes = {
-  title: PropTypes.string,
 };
 
 export default Header;
