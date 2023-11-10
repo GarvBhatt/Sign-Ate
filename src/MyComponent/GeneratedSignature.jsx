@@ -40,9 +40,9 @@ const GeneratedSignature = ({ formData }) => {
       <div style={{ marginBottom: "10px" }}>
         {/* Name and Designation */}
         <h3 style={{ marginBottom: "0" }}>{name}</h3>
-        {department && section && (
+        {department && (
           <p style={{ marginBottom: "0" }}>
-            {department} - {section}
+            {department} {section && `- ${section}`}
           </p>
         )}
       </div>

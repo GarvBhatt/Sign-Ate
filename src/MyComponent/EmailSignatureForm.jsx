@@ -80,11 +80,10 @@ const StudentForm = () => {
           <Form.Label>Section (e.g., 1 for CSIT-1, IOT-1)</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter your section"
+            placeholder="Enter your section (ignore this field if faculty)"
             name="section"
             value={formData.section}
             onChange={handleChange}
-            required
           />
         </Form.Group>
 
