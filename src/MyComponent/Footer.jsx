@@ -22,7 +22,7 @@ const Footer = () => (
     style={footerStyle}
   >
     {/* Footer Content Section */}
-    <div className="footer-wrapper bg-secondary py-4 container text-center text-md-left">
+    <div className="footer-wrapper py-4 container text-center text-md-left">
       <div className="row">
         <div className="col-md-6 mt-md-0 mt-3">
           <h5 className="text-uppercase">About the Email Signature Generator</h5>
