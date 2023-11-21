@@ -51,7 +51,7 @@ const StudentForm = () => {
         AITR Student Email Signature Generator
       </h2>
 
-      <Form onSubmit={handleFormSubmit} className="bg-light rounded p-4 shadow">
+      <Form onSubmit={handleFormSubmit} className="bg-light rounded p-4 shadow"  style={{ marginBottom: "50px" }}>
         <Form.Group  className="mb-3" controlId="name">
           <Form.Label >Name:</Form.Label>
           <Form.Control

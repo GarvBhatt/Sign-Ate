@@ -21,7 +21,7 @@ const GeneratedSignature = ({ formData }) => {
       style={{
         fontFamily: "Arial, sans-serif",
         width: "400px",
-        margin: "0 auto",
+        margin: "50px auto",
         padding: "20px",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
       }}

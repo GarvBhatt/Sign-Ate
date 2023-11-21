@@ -10,7 +10,7 @@ const aboutStyles = {
     margin: "0 auto",
   },
   heading: {
-    fontSize: "36px",
+    fontSize: "30px",
     color: "#333",
     marginBottom: "20px",
     borderBottom: "2px solid #ccc",
